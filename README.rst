@@ -24,11 +24,11 @@ Quick start
 
 4. Start the development server and visit http://127.0.0.1:8000/admin/ to create sections and posts.
 
-5. Create a new section and add its `namespace`
+5. Create a new section and add its `Namespace`
 
-6. Add a new page or hook the app to the existing page (Advanced settings - Application - Select `Posts` from the dropdown - Select Section name from the dropdown)
+6. Add a new page or hook the app to the existing page (`Advanced settings` -> `Application`: Select `Posts` from the dropdown -> `Application Configuration`: Select Section name from the dropdown -> Click `Save`)
 
-7. Add new post from the Admin (POSTS - Posts - Add new - Add title - Select Section - Save and continue editing - Edit link appears to edit the page live)
+7. Add new post from the Admin (POSTS: Posts -> `Add new` -> Add `Title` -> Select `Section` -> Click `Save and continue editing` -> `Edit` link appears to edit the page live)
 
 8. View the page in your browser, your post list will be displayed with the link to the post detail
 
