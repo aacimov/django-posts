@@ -1,0 +1,4 @@
+django-modeltranslation
+django-autoslug
+django-model-utils
+django-cms

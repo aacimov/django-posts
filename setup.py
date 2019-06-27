@@ -12,6 +12,12 @@ setup(
 	version='0.1',
 	packages=['posts'],
 	include_package_data=True,
+	install_requires=[
+		'django-modeltranslation',
+		'django-autoslug',
+		'django-model-utils',
+		'django-cms'
+  	],
 	license='GNU GPL License',  # example license
 	description='A simple Django app to add blog functionality to your Django CMS website.',
 	long_description=README,

@@ -5,6 +5,7 @@ setup.py
 django_posts.egg-info/PKG-INFO
 django_posts.egg-info/SOURCES.txt
 django_posts.egg-info/dependency_links.txt
+django_posts.egg-info/requires.txt
 django_posts.egg-info/top_level.txt
 posts/__init__.py
 posts/admin.py
