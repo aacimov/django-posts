@@ -33,3 +33,8 @@ Quick start
 8. View the page in your browser, your post list will be displayed with the link to the post detail
 
 NOTE: Posts have a `Published` field to control whether they are visible in list view, however they can be edited while not visible from the admin using the `Edit` link
+
+Supported versions
+-----------
+- Python 3.x
+- Django 2.x
