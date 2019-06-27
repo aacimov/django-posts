@@ -14,15 +14,15 @@ Quick start
         ...
         'autoslug', # AutoSlug model field to auto-generate slug
         'model_utils', # model utilities (TimestampedModel mixin for created and modified fields)
+        'cms',
         'posts',
     ]
 
-2. App has 3 extra dependencies as stated above: django-modeltranslation, django-autoslug and django-model-utils so install them first using pip
+2. App has dependencies so they should be included before the posts app
 
-3. Run `python manage.py migrate` to create the posts models.
+3. Run `python manage.py makemigrations` to create the posts models and apply them using `python manage.py migrate`.
 
-4. Start the development server and visit http://127.0.0.1:8000/admin/
-   to create sections and posts.
+4. Start the development server and visit http://127.0.0.1:8000/admin/ to create sections and posts.
 
 5. Create a new section and add its `namespace`
 
@@ -31,3 +31,5 @@ Quick start
 7. Add new post from the Admin (POSTS - Posts - Add new - Add title - Select Section - Save and continue editing - Edit link appears to edit the page live)
 
 8. View the page in your browser, your post list will be displayed with the link to the post detail
+
+NOTE: Posts have a `Published` field to control whether they are visible in list view, however they can be edited while not visible from the admin using the `Edit` link
