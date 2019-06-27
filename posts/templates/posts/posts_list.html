@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load cms_tags menu_tags %}
+
+{% block base_content %}
+	<ul>
+	{% for post in posts %}
+		<li><a href="{% url post.detail_url post.id post.slug  %}">{{ post.title }}</a></li>
+	{% endfor %}
+	</ul>
+{% endblock %}
