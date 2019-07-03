@@ -37,4 +37,3 @@ NOTE: Posts have a `Published` field to control whether they are visible in list
 Supported versions
 -----------
 - Python 3.x
-- Django 2.x
