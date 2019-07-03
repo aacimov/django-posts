@@ -1,4 +1,5 @@
 include LICENSE
 include README.rst
 recursive-include posts/templates *
+recursive-include posts/migrations *
 global-exclude *.py[co]
