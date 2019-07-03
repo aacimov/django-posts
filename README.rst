@@ -10,7 +10,7 @@ Quick start
 1. Add "posts" to your INSTALLED_APPS setting like this::
 
     INSTALLED_APPS = [
-        modeltranslation, # included before all other apps
+        'modeltranslation', # included before all other apps
         ...
         'autoslug', # AutoSlug model field to auto-generate slug
         'model_utils', # model utilities (TimestampedModel mixin for created and modified fields)
@@ -37,3 +37,4 @@ NOTE: Posts have a `Published` field to control whether they are visible in list
 Supported versions
 -----------
 - Python 3.x
+- Django 2.x
