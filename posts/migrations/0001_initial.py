@@ -27,7 +27,7 @@ class Migration(migrations.Migration):
                 ('slug', autoslug.fields.AutoSlugField(always_update=True, editable=False, populate_from='title', unique=True, verbose_name='Slug')),
                 ('detail_url', models.CharField(blank=True, max_length=255, null=True, verbose_name='Detail url')),
                 ('published', models.BooleanField(blank=True, default=False, verbose_name='Published')),
-                ('post_content', cms.models.fields.PlaceholderField(editable=False, null=True, on_delete=django.db.models.deletion.CASCADE, slotname=testproject.app.django-posts.posts.models.post_detail_placeholder, to='cms.Placeholder')),
+                ('post_content', cms.models.fields.PlaceholderField(editable=False, null=True, on_delete=django.db.models.deletion.CASCADE, slotname=posts.models.post_detail_placeholder, to='cms.Placeholder')),
             ],
             options={
                 'verbose_name': 'Post',
