@@ -20,7 +20,7 @@ Quick start
 
 2. App has dependencies so they should be included before the posts app
 
-3. Run `python manage.py makemigrations` to create the posts models and apply them using `python manage.py migrate`.
+3. Run `python manage.py migrate` to apply the posts models.
 
 4. Start the development server and visit http://127.0.0.1:8000/admin/ to create sections and posts.
 
