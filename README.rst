@@ -38,3 +38,4 @@ Supported versions
 -----------
 - Python 3.x
 - Django 2.x
+- Django CMS 3.3.x
