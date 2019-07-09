@@ -4,7 +4,7 @@ from django.utils.translation import ugettext_lazy as _
 from cms.admin.placeholderadmin import PlaceholderAdminMixin
 from django.contrib import admin
 from modeltranslation.admin import TabbedDjangoJqueryTranslationAdmin
-from posts.models import Post, Section
+from posts.models import Post, Section, LatestPostsCMSPlugin
 
 
 @admin.register(Section)
@@ -14,9 +14,9 @@ class SectionAdmin(TabbedDjangoJqueryTranslationAdmin, admin.ModelAdmin):
 
 @admin.register(Post)
 class MultilingualModelAdmin(TabbedDjangoJqueryTranslationAdmin, PlaceholderAdminMixin, admin.ModelAdmin):
-    fields = ('title', 'section', 'edit_link', 'detail_url', 'published')
+    fields = ('title', 'date', 'section', 'edit_link', 'detail_url', 'published')
     readonly_fields = ('detail_url', 'edit_link',)
-    list_display = ('title', 'edit_link', 'section', 'created', 'modified', 'published')
+    list_display = ('title', 'edit_link', 'date', 'section', 'created', 'modified', 'published')
     list_editable = ('section', 'published')
 
     def edit_link(self, obj):

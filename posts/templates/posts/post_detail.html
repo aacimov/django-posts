@@ -2,5 +2,7 @@
 {% load cms_tags menu_tags %}
 
 {% block base_content %}
+	{{ post.date|date:"d.m.Y." }}
+	<h2>{{ post.title }}</h2>
 	{% render_uncached_placeholder post.post_content %}
 {% endblock %}

@@ -4,7 +4,7 @@
 {% block base_content %}
 	<ul>
 	{% for post in posts %}
-		<li><a href="{% url post.detail_url post.id post.slug  %}">{{ post.title }}</a></li>
+		<li>{{ post.date|date:"d.m.Y." }} <a href="{% url post.detail_url post.id post.slug  %}">{{ post.title }}</a></li>
 	{% endfor %}
 	</ul>
 {% endblock %}

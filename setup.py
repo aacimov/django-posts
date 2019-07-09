@@ -9,7 +9,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
 	name='django-posts',
-	version='0.1',
+	version='0.2',
 	packages=['posts'],
 	include_package_data=True,
 	install_requires=[
@@ -21,7 +21,7 @@ setup(
 	license='GNU GPL License',  # example license
 	description='A simple Django app to add blog functionality to your Django CMS website.',
 	long_description=README,
-	url='https://github.com/aacimov/posts',
+	url='https://github.com/aacimov/django-posts',
 	author='Aleks Acimovic',
 	author_email='alex@multi-task.hr',
 	classifiers=[

@@ -1,0 +1,8 @@
+{% load cms_tags %}
+
+{% for post in posts %}
+    {{ post.date|date:"d.m.Y." }}
+    <a href="{% url post.detail_url post.id post.slug  %}">{{ post.title }}</a>
+    {% render_placeholder post.post_content as post_content %}
+    {{ post_content|striptags|safe|truncatewords:20 }}
+{% endfor %}
