@@ -20,7 +20,8 @@ Quick start
 
 2. App has dependencies so they should be included before the posts app
 
-3. Run `python manage.py migrate` to apply the posts models.
+3. Run `python manage.py migrate` to apply the posts models. 
+NOTE: If you have more languages or a main language different than English execute `python manage.py makemigrations` before `python manage.py migrate`.
 
 4. Add CMS_PLACEHOLDER_CONF to your settings.py file::
 
@@ -42,6 +43,12 @@ Quick start
 9. View the page in your browser, your post list will be displayed with the link to the post detail
 
 NOTE: Posts have a `Published` field to control whether they are visible in list view, however they can be edited while not visible from the admin using the `Edit` link
+
+Using the Latest Posts Plugin
+-----------
+1. Add Latest Posts Plugin to an existing page placeholder (e.g. Main placeholder)
+2. Choose Section from which to load posts
+3. Select number of posts to load (1-100)
 
 Supported versions
 -----------
