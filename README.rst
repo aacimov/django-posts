@@ -22,15 +22,24 @@ Quick start
 
 3. Run `python manage.py migrate` to apply the posts models.
 
-4. Start the development server and visit http://127.0.0.1:8000/admin/ to create sections and posts.
+4. Add CMS_PLACEHOLDER_CONF to your settings.py file
 
-5. Create a new section and add its `Namespace`
+    CMS_PLACEHOLDER_CONF = {
+        'post_detail': {
+            'name': _("Post content"), # Change the placeholder name to whatever you prefer
+            'excluded_plugins': ['LatestPostsPlugin'], # Exclude the Latest Posts Plugin to avoid Recursion Error
+        },
+    }
 
-6. Add a new page or hook the app to the existing page (`Advanced settings` -> `Application`: Select `Posts` from the dropdown -> `Application Configuration`: Select Section name from the dropdown -> Click `Save`)
+5. Start the development server and visit http://127.0.0.1:8000/admin/ to create sections and posts.
 
-7. Add new post from the Admin (POSTS: Posts -> `Add new` -> Add `Title` -> Select `Section` -> Click `Save and continue editing` -> `Edit` link appears to edit the page live)
+6. Create a new section and add its `Namespace`
 
-8. View the page in your browser, your post list will be displayed with the link to the post detail
+7. Add a new page or hook the app to the existing page (`Advanced settings` -> `Application`: Select `Posts` from the dropdown -> `Application Configuration`: Select Section name from the dropdown -> Click `Save`)
+
+8. Add new post from the Admin (POSTS: Posts -> `Add new` -> Add `Title` -> Select `Section` -> Click `Save and continue editing` -> `Edit` link appears to edit the page live)
+
+9. View the page in your browser, your post list will be displayed with the link to the post detail
 
 NOTE: Posts have a `Published` field to control whether they are visible in list view, however they can be edited while not visible from the admin using the `Edit` link
 
