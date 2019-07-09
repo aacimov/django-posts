@@ -6,7 +6,7 @@ Posts is a simple Django app for adding blog functionality to your Django CMS ba
 
 Quick start
 -----------
-
+```python
 1. Add "posts" to your INSTALLED_APPS setting like this::
 
     INSTALLED_APPS = [
@@ -17,20 +17,20 @@ Quick start
         'cms',
         'posts',
     ]
-
+```
 2. App has dependencies so they should be included before the posts app
 
 3. Run `python manage.py migrate` to apply the posts models.
 
 4. Add CMS_PLACEHOLDER_CONF to your settings.py file
-
+```python
     CMS_PLACEHOLDER_CONF = {
         'post_detail': {
             'name': _("Post content"), # Change the placeholder name to whatever you prefer
             'excluded_plugins': ['LatestPostsPlugin'], # Exclude the Latest Posts Plugin to avoid Recursion Error
         },
-    }  
-
+    }
+```
 5. Start the development server and visit http://127.0.0.1:8000/admin/ to create sections and posts.
 
 6. Create a new section and add its `Namespace`
