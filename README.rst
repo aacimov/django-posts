@@ -21,6 +21,7 @@ Quick start
 2. App has dependencies so they should be included before the posts app
 
 3. Run `python manage.py migrate` to apply the posts models. 
+
 NOTE: If you have more languages or a main language different than English execute `python manage.py makemigrations` before `python manage.py migrate`.
 
 4. Add CMS_PLACEHOLDER_CONF to your settings.py file::
