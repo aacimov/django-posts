@@ -29,7 +29,7 @@ Quick start
             'name': _("Post content"), # Change the placeholder name to whatever you prefer
             'excluded_plugins': ['LatestPostsPlugin'], # Exclude the Latest Posts Plugin to avoid Recursion Error
         },
-    }
+    }  
 
 5. Start the development server and visit http://127.0.0.1:8000/admin/ to create sections and posts.
 
