@@ -9,27 +9,30 @@ from posts.models import Post, Section, LatestPostsCMSPlugin
 
 @admin.register(Section)
 class SectionAdmin(TabbedDjangoJqueryTranslationAdmin, admin.ModelAdmin):
-    pass
+	pass
 
 
 @admin.register(Post)
 class MultilingualModelAdmin(TabbedDjangoJqueryTranslationAdmin, PlaceholderAdminMixin, admin.ModelAdmin):
-    fields = ('title', 'date', 'section', 'edit_link', 'detail_url', 'published')
-    readonly_fields = ('detail_url', 'edit_link',)
-    list_display = ('title', 'edit_link', 'date', 'section', 'created', 'modified', 'published')
-    list_editable = ('section', 'published')
+	fields = ('title', 'date', 'section', 'featured_image', 'external_url', 'edit_link', 'detail_url', 'published')
+	readonly_fields = ('detail_url', 'edit_link',)
+	list_display = ('title', 'edit_link', 'date', 'section', 'created', 'modified', 'published')
+	list_filter = ('section', 'published')
+	list_editable = ('section', 'published')
 
-    def edit_link(self, obj):
+	def edit_link(self, obj):
 
-        try:
-            post_section = Post.objects.get(id=obj.id).section.namespace
-            return format_html(_("<a href='%s' target='_blank'>Edit</a>") % reverse('%s:%s' % (post_section, 'post_detail'), kwargs={'id': obj.id, 'slug': obj.slug}))
+		try:
+			post_section = Post.objects.get(id=obj.id).section.namespace
+			return format_html(
+				_("<a href='%s' target='_blank'>Edit</a>") % reverse('%s:%s' % (post_section, 'post_detail'),
+																	 kwargs={'id': obj.id, 'slug': obj.slug}))
 
-        except NoReverseMatch:
-            return format_html(_("<span>Make a page with post namespace apphook</span>"))
+		except NoReverseMatch:
+			return format_html(_("<span>Make a page with post namespace apphook</span>"))
 
-        except:
-            return format_html(_("<span>Save your post first</span>"))
+		except:
+			return format_html(_("<span>Save your post first</span>"))
 
-    edit_link.allow_tags = True
-    edit_link.short_description = _('Edit post live on page')
+	edit_link.allow_tags = True
+	edit_link.short_description = _('Edit post live on page')

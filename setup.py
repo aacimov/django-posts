@@ -9,7 +9,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
 	name='django-posts',
-	version='0.2',
+	version='0.3',
 	packages=['posts'],
 	include_package_data=True,
 	install_requires=[
@@ -18,7 +18,7 @@ setup(
 		'django-model-utils',
 		'django-cms'
   	],
-	license='GNU GPL License',  # example license
+	license='GNU GPL License',
 	description='A simple Django app to add blog functionality to your Django CMS website.',
 	long_description=README,
 	url='https://github.com/aacimov/django-posts',
@@ -27,9 +27,9 @@ setup(
 	classifiers=[
 		'Environment :: Web Environment',
 		'Framework :: Django',
-		'Framework :: Django :: 2.x',  # replace "X.Y" as appropriate
+		'Framework :: Django :: 2.x',
 		'Intended Audience :: Developers',
-		'License :: OSI Approved :: GNU GPL License',  # example license
+		'License :: OSI Approved :: GNU GPL License',
 		'Operating System :: OS Independent',
 		'Programming Language :: Python',
 		'Programming Language :: Python :: 3.3',

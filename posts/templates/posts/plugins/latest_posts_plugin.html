@@ -2,7 +2,14 @@
 
 {% for post in posts %}
     {{ post.date|date:"d.m.Y." }}
-    <a href="{% url post.detail_url post.id post.slug  %}">{{ post.title }}</a>
+    <a href="{% if post.external_url %}{{ post.external_url }}{% else %}{% url post.detail_url post.id post.slug  %}{% endif %}"{% if post.external_url %} target="_blank" {% endif %}>{{ post.title }}</a>
+	{% if post.featured_image %}
+		<div>
+			<a href="{% if post.external_url %}{{ post.external_url }}{% else %}{% url post.detail_url post.id post.slug  %}{% endif %}"{% if post.external_url %} target="_blank" {% endif %}>
+				<img src="{{ post.featured_image.url }}" alt="{{ post.title }}" />
+			</a>
+		</div>
+	{% endif %}
     {% render_placeholder post.post_content as post_content %}
     {{ post_content|striptags|safe|truncatewords:20 }}
 {% endfor %}

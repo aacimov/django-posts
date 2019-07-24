@@ -3,7 +3,9 @@ from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
 from cms.models.fields import PlaceholderField
 from cms.models import CMSPlugin
+from django.db.models import URLField
 from django.utils.translation import ugettext_lazy as _
+from filer.fields.image import FilerImageField
 from model_utils.models import TimeStampedModel
 
 
@@ -28,6 +30,10 @@ class Post(TimeStampedModel):
 	title = models.CharField("Title", max_length=255)
 	slug = AutoSlugField(_("Slug"), unique=True, populate_from='title', always_update=True)
 	date = models.DateTimeField(_("Date"), null=True)
+	featured_image = FilerImageField(blank=True, null=True, on_delete=models.SET_NULL, verbose_name=_("Featured image"),
+									 help_text=_("Shown on post lists"))
+	external_url = URLField(_("Post external URL"), blank=True, help_text=_(
+		"If post is published on an external webiste, use this field to link the title and the image to the external source. Opens in new window."))
 	section = models.ForeignKey(Section, null=True, on_delete=models.SET_NULL, related_name="post_section",
 								verbose_name=_("Section"))
 	detail_url = models.CharField(_("Detail url"), blank=True, null=True, max_length=255)
