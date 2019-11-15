@@ -40,7 +40,7 @@ class PostList(View):
         except:
             section = None
 
-        posts = Post.objects.filter(published=True, section__namespace=section)
+        posts = Post.objects.filter(published=True, section=section)
 
         context = {
             "section": self.model.section,
