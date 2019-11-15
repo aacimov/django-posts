@@ -44,8 +44,8 @@ NOTE: If you have more languages or a main language different than English execu
 9. View the page in your browser, your post list will be displayed with the link to the post detail
 
 NOTES:
-* Posts have a `Published` field to control whether they are visible in list view, however they can be edited while not visible from the admin using the `Edit` link
-* When using multiple languages and editing in frontend, Post *Edit link* is generated for Administration language, set your language preference in User settings to match the default language, otherwise you will not see the generated *Edit link*
+- Posts have a `Published` field to control whether they are visible in list view, however they can be edited while not visible from the admin using the `Edit` link
+- When using multiple languages and editing in frontend, Post *Edit link* is generated for Administration language, set your language preference in User settings to match the default language, otherwise you will not see the generated *Edit link*
 
 Using the Latest Posts Plugin
 -----------
