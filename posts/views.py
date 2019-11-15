@@ -23,7 +23,7 @@ class PostDetail(View):
         context = {
             "post": post,
             "section": section,
-            'request': request,
+            "request": request,
         }
 
         return render(request, self.template_name, context)
@@ -45,7 +45,7 @@ class PostList(View):
         context = {
             "section": self.model.section,
             "posts": posts,
-            'request': request,
+            "request": request,
         }
 
         return render(request, self.template_name, context)
